@@ -4,13 +4,21 @@ getElementById returns a single element by id.
 getElementsByClassName returns a collection of elements by class name.
 querySelector returns the first match.
 querySelectorAll returns all matches as a node list.
+1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+ans 1:
+getElementById returns a single element by id.
+getElementsByClassName returns a collection of elements by class name.
+querySelector returns the first match.
+querySelectorAll returns all matches as a node list.
 
 
 2. How do you create and insert a new element into the DOM?
 ans 2:
+```js
 const div = document.createElement('div');
 div.textContent = 'hi';
 parent.appendChild(div);
+```
 
 
 3. What is Event Bubbling? And how does it work?
