@@ -6,6 +6,9 @@ const totalJobs = document.getElementById('totalJobs');
 const totalInterview = document.getElementById('totalInterview');
 const totalRejection = document.getElementById('totalRejection');
 
+//job count
+const jobCount = document.getElementById('job-count');
+
 // Tab buttons
 const tabAll = document.getElementById('tabAll');
 const tabInterview = document.getElementById('tabInterview');
@@ -46,8 +49,12 @@ function toggleStyle(id) {
         filterSection.classList.remove('hidden');
         if (interviewList.length === 0) {
             renderNoJob();
+            jobCount.innerText = '0 jobs';
         }
-        else renderInterview();
+        else {
+            renderInterview();
+            jobCount.innerText = interviewList.length + ' of ' + jobList.children.length + ' jobs';
+        }
         currentTab = 'tabInterview';
     }
     else if (id === 'tabRejected') {
@@ -56,16 +63,25 @@ function toggleStyle(id) {
         if (rejectionList.length === 0) {
             renderNoJob();
         }
-        else renderRejected();
+        else {
+            renderRejected();
+            jobCount.innerText = rejectionList.length + ' of ' + jobList.children.length + ' jobs';
+        }
         currentTab = 'tabRejected';
     }
     else if (id === 'tabAll') {
-        jobList.classList.remove('hidden');
-        filterSection.classList.add('hidden');
-        currentTab = 'tabAll';
-        if (jobList.children.length === 0) {
+        if(jobList.children.length === 0){
+            jobList.classList.add('hidden');
+            filterSection.classList.remove('hidden');
             renderNoJob();
         }
+        else{
+            jobList.classList.remove('hidden');
+            filterSection.classList.add('hidden');
+        }
+        
+        currentTab = 'tabAll';
+        jobCount.innerText = jobList.children.length + ' jobs';
     }
 }
 allJobs();
@@ -99,8 +115,12 @@ mainContainer.addEventListener('click', function (event) {
 
             if (rejectionList.length === 0) {
                 renderNoJob();
+                jobCount.innerText = '0 jobs'
             }
-            else renderRejected();
+            else {
+                renderRejected();
+                jobCount.innerText = rejectionList.length + ' of ' + jobList.children.length + ' jobs';
+            }
         }
 
         allJobs();
@@ -132,10 +152,73 @@ mainContainer.addEventListener('click', function (event) {
 
             if (interviewList.length === 0) {
                 renderNoJob();
+                jobCount.innerText = '0 jobs';
             }
-            else renderInterview();
+            else {
+                renderInterview();
+                jobCount.innerText = interviewList.length + ' of ' + jobList.children.length + ' jobs';
+            }
         }
 
+        allJobs();
+    }
+    else if (event.target.closest('.delete-btn')) {
+        // const card = event.target.parentNode.parentNode.parentNode;
+        // card.remove();
+
+        // const company = card.querySelector('h3').textContent;
+        // interviewList = interviewList.filter(item => item.company !== company);
+        // rejectionList = rejectionList.filter(item => item.company !== company);
+
+        // jobCount.innerText = jobList.children.length + ' jobs';
+        // allJobs();
+
+        const card = event.target.closest('.bg-white');
+        const company = card.querySelector('h3').textContent;
+
+        card.remove();
+
+        interviewList = interviewList.filter(item => item.company !== company);
+        rejectionList = rejectionList.filter(item => item.company !== company);
+       
+        const allCards = jobList.querySelectorAll('.bg-white');
+        allCards.forEach(item => {
+            const name = item.querySelector('h3').textContent;
+            if (name === company) {
+                item.remove();
+            }
+        });
+
+        if (currentTab === 'tabInterview') {
+
+            if (interviewList.length === 0) {
+                renderNoJob();
+                jobCount.innerText = '0 jobs';
+            }
+            else {
+                renderInterview();
+                jobCount.innerText = interviewList.length + ' of ' + jobList.children.length + ' jobs';
+            }
+        }
+        else if (currentTab === 'tabRejected') {
+
+            if (rejectionList.length === 0) {
+                renderNoJob();
+                jobCount.innerText = '0 jobs'
+            }
+            else {
+                renderRejected();
+                jobCount.innerText = rejectionList.length + ' of ' + jobList.children.length + ' jobs';
+            }
+        }
+        else {
+            if (jobList.children.length === 0) {
+                filterSection.classList.remove('hidden');
+                jobList.classList.add('hidden');
+                renderNoJob();
+            }
+            jobCount.innerText = jobList.children.length + ' jobs';
+        }
         allJobs();
     }
 })
@@ -153,7 +236,7 @@ function renderInterview() {
                     <h3 class="font-bold text-[#002C5C]">${interview.company}</h3>
                     <p class="text-sm text-gray-400">${interview.position}</p>
                 </div>
-                <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                     <i class="fa-regular fa-trash-can"></i>
                 </button>
             </div>
@@ -199,7 +282,7 @@ function renderRejected() {
                     <h3 class="font-bold text-[#002C5C]">${rejected.company}</h3>
                     <p class="text-sm text-gray-400">${rejected.position}</p>
                 </div>
-                <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                     <i class="fa-regular fa-trash-can"></i>
                 </button>
             </div>

@@ -61,7 +61,7 @@
         <!-- Section Header -->
         <div class="flex items-center justify-between mb-4">
             <h2 class="text-xl font-bold text-[#002C5C]">Available Jobs</h2>
-            <span class="text-sm text-gray-400">8 jobs</span>
+            <span id="job-count" class="text-sm text-gray-400">8 jobs</span>
         </div>
 
         <!-- tabs -->
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Filtered card -->
-        <section id="filtered-section" class="hidden flex flex-col gap-4">
+        <section id="filtered-section" class="flex flex-col gap-4">
             
         </section>
 
@@ -92,7 +92,7 @@
                         <h3 class="font-bold text-[#002C5C]">Mobile First Corp</h3>
                         <p class="text-sm text-gray-400">React Native Developer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -116,7 +116,7 @@
                         <h3 class="font-bold text-[#002C5C]">WebFlow Agency</h3>
                         <p class="text-sm text-gray-400">Web Designer & Developer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -134,13 +134,13 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class=" bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
                         <h3 class="font-bold text-[#002C5C]">DataViz Solutions</h3>
                         <p class="text-sm text-gray-400">Data Visualization Specialist</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -158,13 +158,13 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class=" bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
                         <h3 class="font-bold text-[#002C5C]">CloudFirst Inc</h3>
                         <p class="text-sm text-gray-400">Backend Developer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -182,13 +182,13 @@
             </div>
 
             <!-- Card 5 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class=" bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
                         <h3 class="font-bold text-[#002C5C]">Innovation Labs</h3>
                         <p class="text-sm text-gray-400">UI/UX Engineer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -206,13 +206,13 @@
             </div>
 
             <!-- Card 6 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class=" bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
                         <h3 class="font-bold text-[#002C5C]">MegaCorp Solutions</h3>
                         <p class="text-sm text-gray-400">JavaScript Developer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -231,13 +231,13 @@
             </div>
 
             <!-- Card 7 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class=" bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
                         <h3 class="font-bold text-[#002C5C]">StartupXYZ</h3>
                         <p class="text-sm text-gray-400">Full Stack Engineer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
@@ -255,13 +255,13 @@
             </div>
 
             <!-- Card 8 -->
-            <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <div class=" bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
                         <h3 class="font-bold text-[#002C5C]">TechCorp Industries</h3>
                         <p class="text-sm text-gray-400">Senior Frontend Developer</p>
                     </div>
-                    <button class="text-gray-300 hover:text-red-400 transition cursor-pointer">
+                    <button class="delete-btn text-gray-300 hover:text-red-400 transition cursor-pointer">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
