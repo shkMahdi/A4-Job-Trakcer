@@ -66,14 +66,20 @@
 
         <!-- tabs -->
         <div class="flex gap-2 mb-6">
-            <button onclick="toggleStyle('tabAll')" id="tabAll" class="btn btn-sm btn-primary roundedmd px-5">All</button>
-            <button onclick="toggleStyle('tabInterview')" id="tabInterview" class="btn btn-sm btn-soft rounded-md x-5">Interview</button>
-            <button onclick="toggleStyle('tabRejected')" id="tabRejected" class="btn btn-sm btn-soft rounded-md x-5">Rejected</button>
+            <button onclick="toggleStyle('tabAll')" id="tabAll"
+                class="btn btn-sm btn-primary roundedmd px-5">All
+            </button>
+            <button onclick="toggleStyle('tabInterview')" id="tabInterview"
+                class="btn btn-sm btn-soft rounded-md x-5">Interview
+            </button>
+            <button onclick="toggleStyle('tabRejected')" id="tabRejected"
+                class="btn btn-sm btn-soft rounded-md x-5">Rejected
+            </button>
         </div>
 
         <!-- Job Cards -->
         <div id="jobList" class="flex flex-col gap-4">
-            
+
             <!-- card - 1 -->
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
@@ -86,13 +92,15 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>Remote</span><span>•</span><span>Full-time</span><span>•</span><span>$130,000 - $175,000</span>
+                    <span>Remote</span><span>•</span><span>Full-time</span><span>•</span><span>$130,000 -
+                        $175,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Build cross-platform mobile applications using React Native. Work
+                    on products used by millions of users worldwide.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
@@ -108,13 +116,15 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>Los Angeles, CA</span><span>•</span><span>Part-time</span><span>•</span><span>$80,000 - $120,000</span>
+                    <span>Los Angeles, CA</span><span>•</span><span>Part-time</span><span>•</span><span>$80,000 -
+                        $120,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Create stunning web experiences for high-profile clients. Must
+                    have portfolio and experience with modern web design trends.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
@@ -130,17 +140,19 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>Boston, MA</span><span>•</span><span>Full-time</span><span>•</span><span>$125,000 - $165,000</span>
+                    <span>Boston, MA</span><span>•</span><span>Full-time</span><span>•</span><span>$125,000 -
+                        $165,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Transform complex data into compelling visualizations. Required
+                    skills: D3.js, React, and strong analytical thinking.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
-             <!-- Card 4 -->
+            <!-- Card 4 -->
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
@@ -152,17 +164,19 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>Seattle, WA</span><span>•</span><span>Full-time</span><span>•</span><span>$140,000 - $190,000</span>
+                    <span>Seattle, WA</span><span>•</span><span>Full-time</span><span>•</span><span>$140,000 -
+                        $190,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Design and maintain scalable backend systems using Python and AWS.
+                    Work with modern DevOps practices and cloud infrastructure.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
-             <!-- Card 5 -->
+            <!-- Card 5 -->
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
@@ -174,17 +188,19 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>Austin, TX</span><span>•</span><span>Full-time</span><span>•</span><span>$110,000 - $150,000</span>
+                    <span>Austin, TX</span><span>•</span><span>Full-time</span><span>•</span><span>$110,000 -
+                        $150,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Create beautiful and functional user interfaces for our suite of
+                    products. Strong design skills and frontend development expertise required.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
-             <!-- Card 6 -->
+            <!-- Card 6 -->
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
@@ -196,17 +212,20 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>New York, NY</span><span>•</span><span>Full-time</span><span>•</span><span>$130,000 - $170,000</span>
+                    <span>New York, NY</span><span>•</span><span>Full-time</span><span>•</span><span>$130,000 -
+                        $170,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Build enterprise applications with JavaScript and modern
+                    frameworks. We offer competitive compensation, health insurance, and professional development
+                    opportunities.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
-            
-             <!-- Card 7 -->
+
+            <!-- Card 7 -->
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
@@ -218,17 +237,19 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>Remote</span><span>•</span><span>Full-time</span><span>•</span><span>$120,000 - $160,000</span>
+                    <span>Remote</span><span>•</span><span>Full-time</span><span>•</span><span>$120,000 -
+                        $160,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">Join our fast-growing startup and work on our core platform.
+                    Experience with Node.js and React required. Great benefits and equity package included.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
-             <!-- Card 8 -->
+            <!-- Card 8 -->
             <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div class="flex items-start justify-between mb-1">
                     <div>
@@ -240,13 +261,16 @@
                     </button>
                 </div>
                 <div class="flex gap-2 text-xs text-gray-400 mt-3 mb-4">
-                    <span>San Francisco, CA</span><span>•</span><span>Full-time</span><span>•</span><span>$130,000 - $175,000</span>
+                    <span>San Francisco, CA</span><span>•</span><span>Full-time</span><span>•</span><span>$130,000 -
+                        $175,000</span>
                 </div>
-                <span class="text-xs bg-gray-100 text-gray-500 rounded-full px-3 py-1 inline-block">NOT APPLIED</span>
-                <p class="text-sm text-gray-500 my-3">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                <button class="status-btn btn btn-sm btn-soft">NOT APPLIED</button>
+                <p class="text-sm text-gray-500 my-3">We are looking for an experienced Frontend Developer to build
+                    scalable web applications using React and TypeScript. You will work with a talented team on
+                    cutting-edge projects.</p>
                 <div class="flex gap-2">
-                    <button class="btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
-                    <button class="btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
+                    <button class="intterview-btn btn btn-sm btn-outline btn-success rounded-md text-xs px-4">INTERVIEW</button>
+                    <button class="rejected-btn btn btn-sm btn-outline btn-error rounded-md text-xs px-4">REJECTED</button>
                 </div>
             </div>
 
@@ -254,4 +278,5 @@
     </main>
     <script src="./Scripts/script.js"></script>
 </body>
+
 </html>
